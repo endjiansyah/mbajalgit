@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Club - X</title>
+</head>
+
+<body>
+    <h1 id="fulan">
+        <span>Fulan</span>
+        <b>Doelanah</b>
+    </h1>
+    <input type="text" value="Fulanah" id="fulanah">
+    <button type="submit" class="submit">Submit</button>
+
+    <ul>
+        <li>Fulan</li>
+        <li>Fulanah</li>
+        <li>John Doe</li>
+    </ul>
+
+    <input type="text" id="password">
+    <button type="submit" id="maleh">Hide</button>
+    <br>
+    <a href="#" id="link">Link</a>
+    <!-- <a href=""></a>  <a> ==> tag, href ==> atribut -->
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous">
+        </script>
+    <script>
+        // -----------------------------------
+        let ipass = $("#password")
+        let tmaleh = $("#maleh")
+
+        tmaleh.click(function () {
+            if (ipass.attr("type") == "text") {
+                ipass.attr("type", "password") // <input type="password">
+                tmaleh.html("Show")
+            } else {
+                ipass.attr("type", "text") //<input type="text">
+                tmaleh.html("Hide")
+            }
+        })
+        // -----------------------------------
+        // let li = $("li")
+
+        // console.log(li.eq(1).html())
+
+        // let fulan = $("#fulan")    //$("#fulan") ==> ambil data dari id fulan
+        // // fulan.html("<a href='#'>john Doe</a>") // ==> paksa data (dinamis)
+        // let fulanChild = fulan.children(); //ambil keturunan (child didalam tag)
+        // console.log(fulanChild[0]); //ambil isi array (jadi string)
+        // console.log(fulanChild.eq(0)); //ambil objek jquery
+
+        // let fulanah = $('#fulanah')
+        // fulanah.val("John Doe") // .val ==> mengisi value pada inputan (jika ada isinya ("johndoe"))
+        // console.log(fulanah.val()) //.val ==> mengirim data karena tidak ada isinya ()
+
+
+        // let submit = $(".submit")
+        // // let submitPureJS = submit[0] // ambil data ke 1 (string jika lebih dari 1 data) , data pure JS jika hanya 1 data
+        // let SubmitObject = submit.eq(0) // ambil dalam bentuk object (Jquery)
+        // // console.log(submitPureJS)
+        // // console.log(SubmitObject)
+        // SubmitObject.click(function () {
+        //     alert(fulanah.val())  // menampilkan value / isi fulanah ketika SubmitObject di klik
+        // })
+        // // SubmitObject.on('click',function () {
+        // //     alert(fulanah.val())  // menampilkan value / isi fulanah ketika SubmitObject di klik
+        // // })
+
+        // let h2 = $("h2")
+        // console.log(h2.lenght) // lenght untuk mencari jumlah data / menemukan data kosong
+
+        // let link = $("#link")
+        // link.attr("href", "https://instagram.com") // ==> attr("atribut", "value") ==> untuk mengubah value
+        // console.log(link.attr("href")) //attr = atribute didalam tag
+        // link.attr("hilih", "isi atribut") // tambah atribut
+        // link.removeAttr("hilih") // hapus atribut
+
+    </script>
+</body>
+
+</html>
